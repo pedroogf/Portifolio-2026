@@ -1,0 +1,215 @@
+.sobre-mim .container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Image side */
+.art-sobre {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.art-sobre-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+    transition: var(--transition-slow);
+}
+
+.art-sobre-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(7, 7, 11, 0.65));
+    pointer-events: none;
+}
+
+.art-sobre-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+}
+
+.art-sobre:hover .art-sobre-frame img {
+    transform: scale(1.06);
+}
+
+.art-sobre-deco {
+    position: absolute;
+    inset: 18px -18px -18px 18px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--primary);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.art-sobre:hover .art-sobre-deco {
+    inset: 12px -12px -12px 12px;
+}
+
+/* Info side */
+.info-sobre {
+    width: 100%;
+}
+
+.info-sobre p {
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+#lorem-sobre {
+    text-indent: 30px;
+}
+
+/* Quick stats */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 36px 0 20px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.stat strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 4px;
+}
+
+.stat span {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+/* Tabs */
+.tab-titles {
+    display: flex;
+    gap: 36px;
+    margin: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.tab-links {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: var(--text-muted);
+    padding-bottom: 14px;
+    margin-bottom: -15px;
+    transition: var(--transition);
+}
+
+.tab-links:hover { color: var(--text); }
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.4s ease;
+    border-radius: 2px;
+}
+
+.tab-links.active-link {
+    color: var(--primary);
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-contents.active-tab { display: block; }
+
+.tab-contents ul li {
+    margin: 14px 0;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.55;
+    padding-left: 22px;
+    position: relative;
+}
+
+.tab-contents ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.tab-contents ul li span {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sobre-mim .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .art-sobre {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 600px) {
+    .quick-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .tab-titles { gap: 24px; }
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Pedro Ferreira - Desenvolvedor Front-end. Projetos, habilidades e trajetória.">
+    <meta name="author" content="Pedro Ferreira">
+    <title>Pedro Ferreira · Front-end Developer</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sobre.css">
+    <link rel="stylesheet" href="styles/especialidades.css">
+    <link rel="stylesheet" href="styles/projetos.css">
+    <link rel="stylesheet" href="styles/contato.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/c164dbc16b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Decorative background -->
+    <div class="bg-effects" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="header" id="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-mark">PF</span>
+            <span class="logo-text">
+                <span class="logo-first">Pedro</span>
+                <span class="logo-last">Ferreira</span>
+            </span>
+        </a>
+
+        <nav class="navbar" id="navMenu">
+            <a href="#home" class="nav-link active">Início</a>
+            <a href="#sobre-mim" class="nav-link">Sobre</a>
+            <a href="#especialidades" class="nav-link">Especialidades</a>
+            <a href="#projetos" class="nav-link">Projetos</a>
+            <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="download-link" href="imagens/PedroGouveiaFerreira.pdf" download="PedroGouveiaFerreira.pdf">
+                <button id="download-cv"><i class='bx bxs-download'></i> Baixar CV</button>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HOME / HERO -->
+    <section class="home" id="home">
+        <div class="container-home">
+            <div class="info-home reveal">
+                <span class="hero-badge"><span class="status-dot"></span> Disponível para projetos</span>
+                <p class="greeting">Olá, eu sou</p>
+                <h1>Pedro <span>Ferreira</span></h1>
+                <h2 class="role-line">
+                    Desenvolvedor <span class="rotating-words">
+                        <span class="word">Front-end</span>
+                        <span class="word">de Interfaces</span>
+                        <span class="word">Web Moderno</span>
+                        <span class="word">UI/UX</span>
+                    </span>
+                </h2>
+                <p class="hero-desc">
+                    Construo experiências digitais modernas, performáticas e intuitivas. Apaixonado por tecnologia, código e inovação, transformo ideias em proposito.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn btn-primary">
+                        <span>Ver Projetos</span>
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                    <a href="#contato" class="btn btn-ghost">
+                        <span>Entrar em Contato</span>
+                    </a>
+                </div>
+
+                <div class="social-row">
+                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="mailto:pedrogf626@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                </div>
+            </div>
+
+            <div class="art-home reveal">
+                <div class="hero-img-wrap">
+                    <div class="hero-rings">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <img src="imagens/img_main.png" alt="Foto de Pedro Ferreira" class="hero-img">
+                    <div class="floating-badge fb-1"><i class='bx bxl-html5'></i> HTML</div>
+                    <div class="floating-badge fb-2"><i class='bx bxl-css3'></i> CSS</div>
+                    <div class="floating-badge fb-3"><i class='bx bxl-javascript'></i> JS</div>
+                    <div class="floating-badge fb-4"><i class='bx bxl-python'></i> Python</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#sobre-mim" class="scroll-indicator" aria-label="Rolar para baixo">
+            <span class="mouse"><span class="wheel"></span></span>
+        </a>
+    </section>
+
+    <!-- SOBRE / ABOUT -->
+    <section class="sobre-mim" id="sobre-mim">
+        <header class="section-head reveal">
+            <span class="section-tag">01 — Sobre Mim</span>
+            <h1>PRAZER, <span>PEDRO</span>.</h1>
+            <p class="section-sub">Quem está por trás da tela.</p>
+        </header>
+
+        <div class="container">
+            <div class="art-sobre reveal">
+                <div class="art-sobre-frame">
+                    <img src="imagens/img_skills.jpeg" alt="Foto de Pedro Ferreira">
+                </div>
+                <div class="art-sobre-deco"></div>
+            </div>
+
+            <div class="info-sobre reveal">
+                <p id="lorem-sobre">
+                    Tenho 21 anos e sou estudante de Engenharia da Ambiental na UNESP, tendo uma breve experiencia em engenharia da computação. Desde meu primeiro contato com tecnologia, busco ampliar meu conhecimento em programação, com foco em construir interfaces modernas e experiências fluidas para a web.
+                </p>
+                <p id="lorem-sobre">
+                    Meu interesse abrange desenvolvimento web, análise de dados e inteligência artificial. Estou em busca de desafios que me permitam crescer e colaborar em projetos inovadores, sempre com o objetivo de entregar soluções com propósito e qualidade.
+                </p>
+
+                <div class="quick-stats">
+                    <div class="stat">
+                        <strong data-count="2">0</strong>
+                        <span>Anos estudando código</span>
+                    </div>
+                    <div class="stat">
+                        <strong data-count="10">0</strong>
+                        <span>Projetos construídos</span>
+                    </div>
+                    <div class="stat">
+                        <strong data-count="5">0</strong>
+                        <span>Tecnologias dominadas</span>
+                    </div>
+                </div>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event,'habilidades')">Habilidades</p>
+                    <p class="tab-links" onclick="opentab(event,'formacao')">Formação</p>
+                    <p class="tab-links" onclick="opentab(event,'certificados')">Cursos Extras</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="habilidades">
+                    <ul>
+                        <li><span>Python</span><br>Conhecimento avançado da linguagem</li>
+                        <li><span>JavaScript</span><br>Domínio intermediário com foco em web moderna</li>
+                        <li><span>HTML & CSS</span><br>Desenvolvimento Front-end de Web</li>
+                        <li><span>SQL / Excel</span><br>Habilidades com análise de dados</li>
+                        <li><span>SolidWorks</span><br>Modelagem e análise de peças e materiais</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="formacao">
+                    <ul>
+                        <li><span>Ensino Médio</span><br>Colégio Magister · 2021-2023</li>
+                        <li><span>Intercâmbio Internacional</span><br>Burnaby South Secondary School · jan 2023 - jul 2023</li>
+                        <li><span>Bacharelado em Engenharia da Computação - TRANCADO</span><br>Centro Universitário Senac - Santo Amaro · 2024 - 2025</li>
+                        <li><span>Bacharelado em Engenharia da Ambiental</span><br>Universidade Estadual Paulista - UNESP · 2026 - 2030</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="certificados">
+                    <ul>
+                        <li><span>Python</span><br>Curso em Vídeo</li>
+                        <li><span>JavaScript</span><br>JavaScript para Web: Crie páginas dinâmicas (Alura)<br>JavaScript: manipulando elementos no DOM (Alura)</li>
+                        <li><span>HTML / CSS</span><br>The Ultimate HTML5 & CSS3 Series (Code With Mosh)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="especialidades" id="especialidades">
+        <header class="section-head reveal">
+            <span class="section-tag">02 — Especialidades</span>
+            <h1>O QUE EU <span>FAÇO</span>.</h1>
+            <p class="section-sub">Tecnologias e áreas onde eu entrego valor.</p>
+        </header>
+
+        <div class="esp-grid">
+            <article class="esp-card reveal">
+                <div class="esp-icon"><i class='bx bx-code-alt'></i></div>
+                <h3>Front-end Development</h3>
+                <p>Desenvolvimento de interfaces responsivas, acessíveis e performáticas com HTML5, CSS3 e JavaScript moderno.</p>
+                <ul class="esp-stack">
+                    <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsivo</li>
+                </ul>
+            </article>
+
+            <article class="esp-card reveal">
+                <div class="esp-icon"><i class='bx bx-paint'></i></div>
+                <h3>UI / UX Design</h3>
+                <p>Design centrado no usuário, foco em hierarquia visual, microinterações e consistência da experiência.</p>
+                <ul class="esp-stack">
+                    <li>Figma</li><li>Design System</li><li>Prototipagem</li><li>A11y</li>
+                </ul>
+            </article>
+
+            <article class="esp-card reveal">
+                <div class="esp-icon"><i class='bx bx-data'></i></div>
+                <h3>Análise de Dados</h3>
+                <p>Limpeza, exploração e visualização de dados para gerar insights claros e decisões assertivas.</p>
+                <ul class="esp-stack">
+                    <li>Python</li><li>Pandas</li><li>SQL</li><li>Excel</li>
+                </ul>
+            </article>
+
+            <article class="esp-card reveal">
+                <div class="esp-icon"><i class='bx bx-chip'></i></div>
+                <h3>Automação & IA</h3>
+                <p>Construção de scripts e fluxos automatizados aplicando lógica de programação e modelos inteligentes.</p>
+                <ul class="esp-stack">
+                    <li>Python</li><li>APIs</li><li>Scripts</li><li>Machine Learning</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="tech-marquee reveal">
+            <div class="marquee-track">
+                <span><i class='bx bxl-html5'></i> HTML5</span>
+                <span><i class='bx bxl-css3'></i> CSS3</span>
+                <span><i class='bx bxl-javascript'></i> JavaScript</span>
+                <span><i class='bx bxl-python'></i> Python</span>
+                <span><i class='bx bxl-git'></i> Git</span>
+                <span><i class='bx bxl-github'></i> GitHub</span>
+                <span><i class='bx bxl-figma'></i> Figma</span>
+                <span><i class='bx bx-data'></i> SQL</span>
+                <span><i class='bx bxl-html5'></i> HTML5</span>
+                <span><i class='bx bxl-css3'></i> CSS3</span>
+                <span><i class='bx bxl-javascript'></i> JavaScript</span>
+                <span><i class='bx bxl-python'></i> Python</span>
+                <span><i class='bx bxl-git'></i> Git</span>
+                <span><i class='bx bxl-github'></i> GitHub</span>
+                <span><i class='bx bxl-figma'></i> Figma</span>
+                <span><i class='bx bx-data'></i> SQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="projetos" id="projetos">
+        <header class="section-head reveal">
+            <span class="section-tag">03 — Projetos</span>
+            <h1>MEUS <span>PROJETOS</span>.</h1>
+            <p class="section-sub">Uma seleção de trabalhos recentes.</p>
+        </header>
+
+        <div class="container">
+            <div class="container-projetos">
+
+                <article class="box-card reveal">
+                    <div class="card-content">
+                        <div class="card">
+                            <img src="imagens/carrinho-allphatech.jpeg" alt="Projeto AlphaTec">
+                            <div class="card-overlay">
+                                <span class="card-tag">Robótica</span>
+                                <h3>Projeto AlphaTec</h3>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="content-back">
+                                <span class="card-tag">Robótica · Engenharia</span>
+                                <h2>Projeto AlphaTec</h2>
+                                <p>Carrinho autônomo desenvolvido para competição de engenharia, com sensores embarcados e lógica de tomada de decisão em tempo real.</p>
+                                <ul class="proj-stack">
+                                    <li>Arduino</li><li>C++</li><li>Sensores</li>
+                                </ul>
+                            </div>
+                            <div class="botao-saibamais">
+                                <button>Saiba mais <i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="box-card reveal">
+                    <div class="card-content">
+                        <div class="card">
+                            <img src="imagens/site-alura.png" alt="Site Timer Responsivo">
+                            <div class="card-overlay">
+                                <span class="card-tag">Front-end</span>
+                                <h3>Site Timer Responsivo</h3>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="content-back">
+                                <span class="card-tag">Front-end · Web</span>
+                                <h2>Site Timer Responsivo</h2>
+                                <p>Aplicação web focada em produtividade com cronômetro Pomodoro, layout responsivo e foco em uma experiência limpa e direta.</p>
+                                <ul class="proj-stack">
+                                    <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                                </ul>
+                            </div>
+                            <div class="botao-saibamais">
+                                <button>Saiba mais <i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="box-card reveal">
+                    <div class="card-content">
+                        <div class="card">
+                            <img src="imagens/carrinho-segue-linha.png" alt="Carrinho Segue-Linha">
+                            <div class="card-overlay">
+                                <span class="card-tag">Robótica</span>
+                                <h3>Carrinho Segue-Linha</h3>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="content-back">
+                                <span class="card-tag">Robótica · Embarcados</span>
+                                <h2>Carrinho Segue-Linha</h2>
+                                <p>Robô seguidor de linha com sensores infravermelhos, calibragem precisa e algoritmo de controle proporcional para curvas suaves.</p>
+                                <ul class="proj-stack">
+                                    <li>Arduino</li><li>IR Sensors</li><li>PID</li>
+                                </ul>
+                            </div>
+                            <div class="botao-saibamais">
+                                <button>Saiba mais <i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="box-card reveal">
+                    <div class="card-content">
+                        <div class="card" id="docemalte-front">
+                            <img src="imagens/doce-malte.png" alt="Projeto Doce-Malte">
+                            <div class="projeto-andamento">
+                                <h2>Em andamento</h2>
+                                <div class="loading"></div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="content-back">
+                                <span class="card-tag">Front-end · E-commerce</span>
+                                <h2>Projeto Doce-Malte</h2>
+                                <p>Site institucional e e-commerce para uma cervejaria artesanal, com foco em identidade visual marcante e jornada de compra fluida.</p>
+                                <ul class="proj-stack">
+                                    <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                                </ul>
+                            </div>
+                            <div class="botao-saibamais">
+                                <button>Saiba mais <i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="div">
+                <button id="maisprojetos-btn">Mais projetos <i class='bx bx-right-arrow-alt'></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <header class="section-head reveal">
+            <span class="section-tag">04 — Contato</span>
+            <h1>VAMOS <span>CONVERSAR</span>.</h1>
+            <p class="section-sub">Tem um projeto, ideia ou oportunidade? Adoraria saber.</p>
+        </header>
+
+        <div class="contato-grid">
+            <div class="contato-info reveal">
+                <h3>Entre em contato</h3>
+                <p>Estou disponível para freelas, oportunidades e colaborações em projetos com propósito.</p>
+
+                <ul class="contato-list">
+                    <li>
+                        <span class="ci-icon"><i class='bx bx-envelope'></i></span>
+                        <div>
+                            <strong>E-mail</strong>
+                            <a href="mailto:pedrogf626@gmail.com">pedrogf626@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ci-icon"><i class='bx bx-map'></i></span>
+                        <div>
+                            <strong>Localização</strong>
+                            <span>São Paulo, Brasil</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ci-icon"><i class='bx bx-time-five'></i></span>
+                        <div>
+                            <strong>Disponibilidade</strong>
+                            <span>Seg - Sex · 9h às 19h</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="social-row contato-social">
+                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+
+            <form class="contato-form reveal" id="contatoForm" novalidate>
+                <div class="form-row">
+                    <label>
+                        <span>Nome</span>
+                        <input type="text" name="name" required placeholder="Seu nome completo">
+                    </label>
+                    <label>
+                        <span>E-mail</span>
+                        <input type="email" name="email" required placeholder="seu@email.com">
+                    </label>
+                </div>
+                <label>
+                    <span>Assunto</span>
+                    <input type="text" name="subject" placeholder="Sobre o que quer conversar?">
+                </label>
+                <label>
+                    <span>Mensagem</span>
+                    <textarea name="message" rows="5" required placeholder="Conte-me sobre o seu projeto..."></textarea>
+                </label>
+                <button type="submit" class="btn btn-primary form-submit">
+                    <span>Enviar mensagem</span>
+                    <i class='bx bx-send'></i>
+                </button>
+                <p class="form-feedback" id="formFeedback"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-mark">PF</span>
+                <span class="logo-text">
+                    <span class="logo-first">Pedro</span>
+                    <span class="logo-last">Ferreira</span>
+                </span>
+            </a>
+
+            <nav class="footer-nav">
+                <a href="#home">Início</a>
+                <a href="#sobre-mim">Sobre</a>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <p class="footer-copy">© <span id="year"></span> Pedro Ferreira · Construído com código e cuidado.</p>
+        </div>
+        <a href="#home" class="back-top" aria-label="Voltar ao topo"><i class='bx bx-up-arrow-alt'></i></a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
